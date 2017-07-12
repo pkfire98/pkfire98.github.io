@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="css/postcard.css">
+
+<!--
+Welcome to this Back-to-School Postcard Remix! This activity will teach you how
+to read and write the Web to share some of your likes, dislikes, and feelings
+about school with your teacher. 
+
+This Back-to-School Postcard Remix is adapted from Kim Wilkens's winter postcard 
+project at https://techkim.makes.org/thimble/hack-the-holiday-card 
+-->
+
+    <meta name="author" content="Pen Kim">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ABLEISM ISN'T COOL</title>
+
+<!--
+Step 5. Mess around with the code.
+*****************************************************
+
+Here is where you can try to change the fonts.	
+
+Go to www.google.com/fonts to find new fonts. Click on Quick-use and copy the code under " Add this code to your website:". Then go find the font-family parts of the stylesheet and update them with the names of your new fonts. Two-word names should be separated by a space and be inside quotes.
+-->
+
+<!--
+Here are the links that call in our Google fonts for the page. When you change these fonts, be sure to add an 's' to each 'http' for a more secure
+link that keeps your page from getting taken over by someone else.
+-->
+
+    <!--This is the big font under the h1 part of the stylesheet and page.-->
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+    <!--This is the font that looks more like handwriting for the back of the postcard.-->
+
+    <link href='https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+
+<!-- 
+Step 4. Change the predictions
+*****************************************************
+
+As you level up your web skills, you can save scripts as separate files to use on several pages at once. For now, we've left the script here so you can see how it fits into a webpage and how it connects to the button in the body of your page, which is the part that shows up in your browser.
+-->
+   
+    <script>
+
+      var answers = [
+        "Awesome.",
+        "Activists.", 
+        "Considerate.", 
+        "Upstanders.",
+        "Kind.", 
+        "Friends.",
+        "Patient.", 
+        "Loud.",
+        "Advocates."
+      ];
+
+      function fortune() {
+        num = Math.round( (answers.length - 1) * Math.random());
+        return answers[num];
+      }
+
+    </script>
+
+    <!--Step 5. Mess around with the code.
+*****************************************************
+
+Find the 'color, 'font-size,' and 'transform' parts of the stylesheet below. Change the values and see what happens!-->
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <!-- The 'card' <div> wraps around both the front and back sides. -->
+
+      <div class="card">
+
+        <!-- 
+Step 1. Change the message on the front of the card
+****************************************************
+Write what you want to say on the front of the card. Use the CSS to change the size and color.
+-->
+
+        <div class="front face">
+          <h1></h1>
+        </div>
+
+        <!-- The back of the card -  you only see it when the card flips -->
+        <div class="back face">
+
+          <!-- 
+Step 3. Change the note on the back of the card
+*****************************************************
+Add your teacher's name. Then add 3 things you want your teacher to know about you. Finally, change the last line so it's from you, but only use your first initial. Never give out too much information online.
+-->
+
+          <div class="message">
+            <p>Dear Everybody,</p>
+            <p>Ableism is discrimination in favor of able bodied people. Here are three examples of overstepping the boundaries!</p>
+            <ul>
+              <li>Assuming people with disabilities have no autonomy.</li>
+              <li>Feeling entitled to know how people became disabled</li>
+              <li>Using handicapped restrooms without a second thought.</li>
+            </ul>
+            <p>From, Pen Kim</p>
+          </div>
+
+          <!-- School-year predictions -->
+          <div class="address">
+
+            <form>
+
+              <p id="predictions">
+                This year, I hope people will be...<br>
+                <input type="button" id="myButton" name="Answer" value="Click here." onClick="this.form.answer.value = fortune();">
+                <input type="text" id="myAnswer" name="answer" size="25">
+              </p>
+
+            </form>
+          </div>
+
+        </div> <!-- /end of back -->
+
+      </div> <!-- /end of card -->
+
+    </div> <!-- /end of wrapper -->
+
+    <div id="credits">Pen has a functioning body in the Bae Area.</div>
+
+  </body>
+
+</html>

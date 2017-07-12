@@ -1,0 +1,77 @@
+<!-- 1. Save a copy of this project to your own directory if you have not already done so. Open this file in the Chrome browser as well. And have your css file open in sublime text as well.-->
+
+<!-- declaring that this file is written in html5 -->
+<!doctype html>
+
+<html>
+
+	<!-- you put links to external css files, links javascipts and meta info such as description of website here between the head tags -->
+	<head>
+
+		<!-- 2. Title your page. Add title tags here . Whatever you type between the title tags it will show up in the tab of this page's window -->
+		<title>Pen's Self Orbit</title>
+
+		<!-- 3. This is our link to the styles for our collage.	Please link it to the correct file location in your css folder. -->
+		<link rel="stylesheet" type="text/css" href="css/self_orbit_styles.css">
+
+		<!-- 4. We will place our Javascript below this comment later, skip to number 5  -->
+		<script type="text/javascript">
+
+			function changeText(text)
+			{
+				var display = document.getElementById('text-display');
+				display.innerHTML = text;
+			}
+
+			function defaultText()
+			{
+				var display = document.getElementById('text-display');
+				display.innerHTML = "";
+			}
+
+		</script>
+
+	</head>	
+
+	<body>
+
+		<!-- 5. Label the div below with the ID "circle-container" which corresponds your CSS file. Refresh your html page on the Chrome browser window and see the circle-container style you've added -->
+		<div id="circle-container">
+			
+			<!-- 6. Label the following 'a' tags with the ID listed in your CSS that corresponds with the angle you need to create the circle. -->
+
+			<!-- This will be the center image -->
+			<a href='#' id='center'><img src='images/Pen.png' onmouseover="changeText('I\'m Pen Kim.')" onmouseout="defaultText()"></a> 
+
+			<!-- the rest of the images will be around the center image -->
+			<a href='#' id='deg0'><img src='images/banksy.png' onmouseover="changeText('Always Questioning')" onmouseout="defaultText()"/></a>
+
+			<a href='#' id='deg45'><img src='images/arts.png' onmouseover="changeText(' Creative Maker')" onmouseout="defaultText()"/></a>
+
+			<a href='#' id='deg135'><img src='images/Germ.png' onmouseover="changeText('Home away from home')" onmouseout="defaultText()"/></a>
+
+			<a href='#' id='deg180'><img src='images/sf.png' onmouseover="changeText('Fog is beautiful.')" onmouseout="defaultText()"/></a>
+
+			<a href='#' id='deg225'><img src='images/DNA.png' onmouseover="changeText('Biotech enthusiast')" onmouseout="defaultText()"/></a>
+
+			<a href='#' id='deg315'><img src='images/home.png' onmouseover="changeText('Connect and Change ')" onmouseout="defaultText()"/></a>
+
+			<!-- 7. Relink the all img tags to the images you created for your customized orbit.-->
+
+		</div>
+
+		<!-- 8. Add a div with the ID "text-display" below. Tell Megan that you are finished with number 8. As a class we will go back to number 4, where we will add the javascript to display text in this div!-->
+		<div id="text-display"></div>
+
+		<!-- FINISHED 1-8? Now go ahead and change the styles(background color, font family, etc) and when you are done changing styles try the CHALLENGES below this doc!-->
+
+	</body>
+
+</html>
+<!-- *********************** CHALLENGES *********************** -->
+<!-- A. Add a hover effect(s) to your some or all of your images -->
+<!-- B. Currently your links do not link to a new tab. Add a an attribute to allow your links to open a new tab/window -->
+<!-- C. Add 2 more images to your orbit, one above and one below your center image -->
+<!-- D. Add another orbit ring and add more images to the new ring -->
+<!-- E. Position the text-display elsewhere on the page and/or use use jquery display the text using effects such as fadein/fadeout, toggle up/down. -->
+<!-- F. Customize the text-display for every onmouseover -->

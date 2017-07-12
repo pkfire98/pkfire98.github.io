@@ -1,0 +1,100 @@
+/* 1. Write styles for the body tag to give your page a background color, image or texture. */
+body {
+	background-color: paleturquoise;
+}
+
+/* 2. Write styles for div ID text-display so that it displays below your self-orbit */
+#text-display {
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
+}
+
+/* The below styles position icons on the circle  */
+#circle-container {
+	position: relative; 
+	/* CHALLENGE: Can you explain why this div is positioned 'relative'? */
+	width: 24em;
+	height: 24em;
+	padding: 2.8em; /* = 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
+	border-radius: 50%;
+	background-color: honeydew;
+	margin: 5em auto 0;	
+}
+
+/*link size thus resizing the images within them as well*/
+#circle-container a {
+
+	/* 3. Let's write the styles for the circle-container links div id together. */
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	top: 50%; 
+	left: 50%;
+	width: 4em; 
+	height: 4em;
+	margin: -2em; /* 2em = 4em/2 */ /* half the width */
+
+}
+
+#circle-container a#center{
+    height: 168px;
+    width: 117px;
+    margin-bottom: -84px;
+    margin-left: -58px;
+    margin-right: -58px;
+    margin-top: -84px;
+}
+
+/* image positioning*/
+#circle-container img { display: block; width: 100%; }
+#deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
+#deg45 { transform: rotate(45deg) translate(12em) rotate(-45deg); }
+#deg135 { transform: rotate(135deg) translate(12em) rotate(-135deg); }
+#deg180 { transform: translate(-12em); }
+#deg225 { transform: rotate(225deg) translate(12em) rotate(-225deg); }
+#deg315 { transform: rotate(315deg) translate(12em) rotate(-315deg); }
+#deg90 { transform: rotate(90deg) translate(12em) rotate(-190deg); }
+
+/* this is for showing the orbit/inner-circle on which the images are placed */
+#circle-container:after {
+/* 4. We'll write the styles for the circle-container for the circle border together. */
+	position: absolute;
+	top: 2.8em; 
+	left: 2.8em;
+	width: 24em; 
+	height: 24em;
+	border: dashed 3px turquoise;
+	border-radius: 50%;
+	opacity: .3;
+	pointer-events: none;
+	content: '';
+}
+
+/* this is for showing the hover state of the circle on which the images are placed */
+#circle-container:hover:after { 
+	/* 5. We'll write the styles for the circle-container for the circle border together. */
+	/*change opacity to solid*/
+	opacity: 1;
+}
+
+
+/* 6. What do the below styles control? */
+#circle-container a:not(#center):after {
+	position: absolute;
+	top: 50%; left: 50%;
+	width: 4px; height: 4px;
+	border-radius: 50%;
+	box-shadow: 0 0 .5em .5em white;
+	margin: -2px;
+	background: black;
+	opacity: .3;
+	content: '';
+}
+
+#circle-container:hover a:after { opacity: 1; }

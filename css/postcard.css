@@ -1,0 +1,149 @@
+
+      body {
+        padding: 20px;
+        color: black;
+        background-color: #ffd800;
+        text-align: center;
+      }   
+      
+      .wrapper {
+        position: relative;
+        padding-top: 50px;
+        z-index: 1;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        display: inline-block;
+        margin: 50px auto;
+      }
+
+      .card {
+        width: 750px;
+        height: 475px;
+        margin: 0 auto;
+        border: 10px solid black;
+        border-radius: 42px;
+        cursor: pointer;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: all 1s linear 0s;
+        -moz-transition: all 1s linear 0s;
+        -o-transition: all 1s linear 0s;
+        -ms-transition: all 1s linear 0s;
+        transition: all 1s linear 0s;
+        -webkit-box-shadow: 0px 0px 10px #aaa;
+        box-shadow: 0px 0px 10px #aaa;
+      }
+
+      .wrapper:hover .card {
+
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+
+      }
+
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+      }
+
+      /* Step 2. Change the Image */
+
+      .front {
+        background-color: #ffd800;
+        background-image: url('http://i0.wp.com/www.autismdailynewscast.com/wp-content/uploads/2015/02/ableism.png');
+        background-size: cover;
+      }
+
+      .back {
+        background-color: white;
+        background-image: url('postcard1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #333;
+        font-family: 'Waiting for the Sunrise', monospace;
+        font-size: 20px;
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+
+      h1 {
+        font-family: 'Oswald', monospace;
+        color: black;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 3px #ffd800;
+        font-size: 48px; 
+        font-weight: bold;
+        letter-spacing: -1px;
+        max-width: 90%;
+        display: inline-block;
+        padding: 4px 25px;
+      }
+
+      .message {
+        float:left;
+        text-align: left;
+        width: 42%;
+        margin: 30px 0 0 40px;
+      }
+
+      .address {
+        float: right;
+        text-align: left;
+        font-size: 21px;
+        line-height: 57px;
+        padding-top: 139px;
+        width: 47%;
+      }
+
+      #myButton {
+        background-color: #ffd800;
+        border: 1px solid black;
+        font-family: 'Oswald', monospace;
+        font-size: 16px;
+        color: #000;
+      }
+
+      #myAnswer {
+        background-color: white;
+        border: 0px solid white;
+        font-family: 'Oswald', monospace;
+        font-size: 16px;
+        color:#000;
+      }
+
+      #predictions{
+        margin-left: 75px;
+        font-size: 20px;
+      }
+
+      #credits {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-family: monospace;
+        font-size: 12px;
+        color: black;
+        text-align: left;
+      }
+
+      a {
+        font-family: monospace;
+        font-size: 12px;
+        color: black;
+      }
+
+  

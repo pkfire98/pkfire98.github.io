@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+html { 
+  background: url("http://s2.thingpic.com/images/Yk/VVTuZScQaJNLuU1Uf9ePQbMd.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Oswald, serif;  
+  text-align: center;
+  font-size:x-large;
+}
+
+
+p {
+  font-size: 22px;
+}
+
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  background: red;
+  color: white;
+}
+
+ul {
+width: 160px;
+margin: 0 auto;
+}
+
+.boxed {
+  border: 15px #FF0000;
+}
+
+
